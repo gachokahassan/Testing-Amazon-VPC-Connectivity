@@ -3,6 +3,9 @@
 [![AWS](https://img.shields.io/badge/AWS-100000?style=flat&logo=amazon&logoColor=white&labelColor=232F3E&color=FF9900)](https://aws.amazon.com/)
 [![AWS VPC](https://img.shields.io/badge/AWS_VPC-100000?style=flat&logo=amazonaws&logoColor=white&labelColor=0052CC&color=232F3E)](https://aws.amazon.com/vpc/)
 [![AWS EC2](https://img.shields.io/badge/AWS_EC2-100000?style=flat&logo=amazonec2&logoColor=white&labelColor=FF9900&color=232F3E)](https://aws.amazon.com/ec2/)
+[![Security Groups](https://img.shields.io/badge/Security_Groups-100000?style=flat&logo=shield&logoColor=white&labelColor=2D3748&color=4CAF50)](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html)
+[![Network ACLs](https://img.shields.io/badge/Network_ACLs-100000?style=flat&logo=firewall&logoColor=white&labelColor=2D3748&color=2196F3)](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html)
+
 
 ---
 
@@ -37,7 +40,7 @@ Amazon VPC allows you to create isolated virtual networks within the AWS cloud. 
 
 In this project, I used Amazon VPC to manage network connectivity and security for two servers: a **public server** and a **private server**. The key objective was to ensure that these servers could communicate securely, using well-defined networking components such as route tables, security groups, and NACLs.
 
-![VPC Architecture](./images/vpc-architecture.png)  
+![VPC Architecture](./Images/architecture.png)  
 *Figure: High-level architecture of the VPC setup, showcasing public and private subnets, routing tables, and an internet gateway.*
 
 ---
@@ -61,7 +64,7 @@ One challenge I didn’t expect was the amount of time troubleshooting network i
 
 The first connectivity test I performed was to check if I could connect to the **NextWork public server** in the **NextWork public subnet** using **EC2 Instance Connect** (SSH).
 
-![Failed Ping Request](./images/failed-ping.png)  
+![Failed Ping Request](./Images/ping-fail.png)  
 *Figure: Initial failed ping request highlighting the connectivity issue.*
 
 ---
@@ -72,7 +75,7 @@ During testing, I encountered an issue where I couldn't access the server due to
 
 I also tested connectivity between the **public** and **private** servers using the `ping` command. Initially, the ping request from the public server to the private server showed successful transmission but no response. I then added the necessary **ICMP IPv4 rules** to both the **NextWork NACL** and the **Private Security Group** to resolve the issue.
 
-![Successful Ping Request](./images/successful-ping.png)  
+![Successful Ping Request](./Images/ping-success.png)  
 *Figure: Successful ping request showing responses from the private server.*
 
 ---
