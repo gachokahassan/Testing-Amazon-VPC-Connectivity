@@ -25,7 +25,7 @@ This project demonstrates the use of **Amazon Virtual Private Cloud (VPC)** to s
 6. [Troubleshooting Connectivity](#troubleshooting-connectivity)
 7. [Connectivity to the Internet](#connectivity-to-the-internet)
 8. [Best Practices](#best-practices)
-9. [Acknowledgments](#acknowledgments)
+9. [Community and Acknowledgment](#community-and-acknowledgment)
 10. [Author](#author)
 
 ---
@@ -95,9 +95,9 @@ To verify internet connectivity, I used the **curl** command to send HTTP reques
 
 ---
 
-## Acknowledgments
+## Community and Acknowledgment
+Special thanks to [NextWork Community](https://link.nextwork.org/app?utm_source=app&utm_medium=nav&utm_campaign=referral) and **Natasha Ong** ([LinkedIn](https://www.linkedin.com/in/natasha-ong)) for their valuable guidance and insights.
 
-Special thanks to **NextWork.org** for providing the platform and community support throughout this project. 
 
 ---
 
